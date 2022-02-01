@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const session = require('express-session')
 require('dotenv').config()
-const token = require('../config/token')
 
 //handles login action
 const login = async (req,res)=>{

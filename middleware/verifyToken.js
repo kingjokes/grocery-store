@@ -1,10 +1,12 @@
 const jwt = require('jsonwebtoken')
-const token = require('../config/token')
+
 require('dotenv').config()
 
 //token verify  middleware
 const verifyToken = async (req, res, next)=>{
-    const cookies = req.headers['cookie'].split(';')
+    const cookies = req.headers['cookie'] !== undefined
+        ? req.headers['cookie'].split(';')
+        :[]
     //extract user token from headers
     const token = cookies.find(item => item.includes('auth-token'))
     //return if no auth-token is found

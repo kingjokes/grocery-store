@@ -18,7 +18,7 @@ app.use(session({ resave: true ,secret: '123456' , saveUninitialized: true})); /
 
 app.use('/user',router) //handing all user routes
 
-app.listen(8000,'192.168.21.127'); //creating server
+app.listen(8000,'localhost'); //creating server
 
 
 //route handling

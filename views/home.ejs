@@ -1,0 +1,202 @@
+<%- include('./templates/header') %>
+
+<%- include('./templates/cartHeader') %>
+<div class="w3-padding-64 w3-hide-small" style="min-height:600px;    background-color: #F6F9FC;">
+
+    <div class="w3-display-container">
+
+        <div class="row">
+            <div class="col-5 col-sm-5 col-md-5 col-lg-5" >
+                <div class="w3-display-container" style="height: 600px; width:100%">
+
+                    <div class="w3-display-bottomleft">
+                        <img class="w3-image" src="/public/img/bg1.png">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-3 col-sm-2 col-md-2 col-lg-2">
+                &nbsp;
+            </div>
+            <div class="col-5 col-sm-5 col-md-5 col-lg-5">
+                <div class="w3-display-container" style="height: 600px; width:100%">
+
+                    <div class="w3-display-bottomleft">
+                        <img class="w3-image" src="/public/img/bg2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-display-middle w3-center w3-mobile">
+            <h1 class="title">
+                Buy groceries and feed yourself, Even on the road.
+            </h1>
+            <div class="input-group mb-3" style=" box-shadow: rgb(145 158 171 / 24%) -24px 24px 72px -8px;">
+                <div class="input-group-prepend">
+                    <button class="btn w3-white"> <i class="fa fa-search"></i></button>
+                </div>
+                <input type="text" class="form-control searchInput" placeholder="Searching For..">
+                <div class="input-group-append">
+                    <button class="btn searchButton" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+<div class="w3-padding-64 w3-display-container w3-hide-large w3-hide-medium" style="height:400px;    background-color: #F6F9FC;">
+
+    <div class="w3-display-middle w3-padding w3-center w3-mobile">
+        <h1 class="title w3-large">
+            Buy groceries and feed yourself, Even on the road.
+        </h1>
+        <div class="input-group mb-3" style=" box-shadow: rgb(145 158 171 / 24%) -24px 24px 72px -8px;">
+            <div class="input-group-prepend">
+                <button class="btn w3-white"> <i class="fa fa-search"></i></button>
+            </div>
+            <input type="text" class="form-control searchInput" placeholder="Searching For..">
+            <div class="input-group-append">
+                <button class="btn searchButton" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="w3-padding-64" style="    background: #fff;">
+    <div class="row w3-padding">
+        <div class="col-12 col-md-1 col-sm-1 col-lg-1">
+            &nbsp;
+        </div>
+        <div class="col-12 col-md-10 col-sm-10 col-lg-10">
+            <div class="row">
+                <div class="col-12 col-sm-3 col-md-3 col-lg-3 w3-padding">
+                    <div class="featuresList">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-truck icon "></i>
+                            <span style="margin:0 5px"> &nbsp;&nbsp;</span>
+                            <div>
+                                <h6 style="font-weight: bolder">Fast Delivery</h6>
+                                <span>Start from $10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-3 col-md-3 col-lg-3 w3-padding">
+                    <div class="featuresList">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-bank icon "></i>
+                            <span style="margin:0 5px"> &nbsp;&nbsp;</span>
+                            <div>
+                                <h6 style="font-weight: bolder">Money Guarantee</h6>
+                                <span>7 Days Back</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-3 col-md-3 col-lg-3 w3-padding">
+                    <div class="featuresList">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-clock-o icon "></i>
+                            <span style="margin:0 5px"> &nbsp;&nbsp;</span>
+                            <div>
+                                <h6 style="font-weight: bolder">365 Days</h6>
+                                <span>For free return</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-3 col-md-3 col-lg-3 w3-padding">
+                    <div class="featuresList">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-credit-card icon "></i>
+                            <span style="margin:0 5px"> &nbsp;&nbsp;</span>
+                            <div>
+                                <h6 style="font-weight: bolder">Payment</h6>
+                                <span>Secure Payment</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-12 col-md-1 col-sm-1 col-lg-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
+<div class="w3-padding-32" style="    background: #fff;">
+
+    <div class="row w3-padding">
+        <div class="col-12 col-md-1 col-sm-1 col-lg-1">
+            &nbsp;
+        </div>
+        <div class="col-12 col-md-10 col-sm-10 col-lg-10">
+            <h6>Popular Products</h6>
+            <span class="w3-small">Best collection in 2021 for you!</span>
+            <div class="row">
+                <% if(products.length!== 0){
+                    products.map((item)=>{ %>
+                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 w3-padding w3-margin-bottom">
+                            <a href="/product-details/<%- item.id%>" title="<%- item.name%>">
+                                <div class="productList w3-display-container">
+                                    <div class="w3-center">
+                                        <img class="w3-image" src="/public/img/<%-item.image%>">
+                                    </div>
+                                    <div class="w3-display-topleft w3-padding">
+                                        <span class="badge productDiscount">
+                                            <span><%- item.discount%>%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="productDesc">
+                                    <h6 class="productTitle"><%- item.name%></h6>
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <span class="productPrice">$<%-item.price%></span>
+                                        <span>&nbsp;</span>
+                                        <a href="javascript:void(0)"
+                                           style="color:inherit!important; "
+                                           title="Add <%- item.name%> to cart"
+                                           data-item-name="<%- item.name %>"
+                                           data-item-price="<%- item.price %>>"
+                                           data-item-image="<%- item.image%>"
+                                           class="add-item"
+
+                                        >
+                                            <i class="fa fa-cart-plus w3-large"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </a>
+
+
+                        </div>
+                    <%
+                        })
+                }
+                %>
+
+
+            </div>
+        </div>
+        <div class="col-12 col-md-1 col-sm-1 col-lg-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('./templates/cartFooter') %>

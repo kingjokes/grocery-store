@@ -1,0 +1,53 @@
+<%- include('./templates/header') %>
+
+<%- include('./templates/cartHeader') %>
+
+<div class="w3-padding-64 " style="min-height:600px;    background-color: #fff;;">
+    <br><br>
+
+    <div class="row w3-padding">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            &nbsp;
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 w3-padding" >
+            <div>
+                <div>
+                    <span class="checkoutTitle">Your Order</span>
+                </div>
+                <br>
+                <div id="item-list">
+
+                </div>
+
+
+            </div>
+
+            <hr class="checkoutDivider">
+            <div class="w3-margin-top">
+                <div class="d-flex flex-row justify-content-between">
+                    <p class="checkoutSubTotal">
+                        <span class="">Total</span>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="checkoutPrice"><b id="cart-sum"></b></p></div>
+
+            </div>
+            <br>
+            <button class="checkoutButton " onclick="checkOut()" id="checkout" disabled>Place Order</button>
+
+
+        </div>
+
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            &nbsp;
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<%- include('./templates/cartFooter') %>

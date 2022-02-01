@@ -1,0 +1,52 @@
+<%- include('./templates/header') %>
+
+<%- include('./templates/cartHeader') %>
+<div class="w3-padding-64 " style="min-height:600px;    background-color: #F6F9FC;">
+    <br><br class="w3-hide-small"><br class="w3-hide-small">
+
+    <div class="row w3-padding">
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2">
+            &nbsp;
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4" >
+            <a href="/home" class="w3-text-dark-gray w3-hover-text-cyan ">
+                <i class="fa fa-arrow-circle-left mr-1"></i>
+                Go back
+            </a>
+            <br>
+            <div style="padding:24px">
+                <img class="w3-image" src="/public/img/<%- details.image%>">
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4" >
+            <br>
+
+            <h1 class="detailsTitle"><%- details.name%></h1>
+            <span class="detailsSubtitle">Description:</span>
+            <br>
+            <div class="detailsContent">
+                <%- details.description%>
+            </div>
+            <br>
+            <button
+                class="detailsButton add-item"
+                data-item-name="<%- details.name %>"
+                data-item-price="<%- details.price %>>"
+                data-item-image="<%- details.image%>"
+                >
+                Add to Cart
+            </button>
+        </div>
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2">
+            &nbsp;
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<%- include('./templates/cartFooter') %>

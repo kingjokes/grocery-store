@@ -1,0 +1,68 @@
+<script>
+    $(document).ready(function(){
+        $(window).on('load',function (){
+            if(sessionStorage.getItem('userEmail') === null){
+                console.log('yes')
+                window.location.href='/'
+            }
+        })
+    })
+</script>
+<div class="w3-top w3-card header mb-5" style=" padding:10px 20px">
+    <div class="w3-bar">
+        <div class="w3-left">
+            <div class="w3-bar-item">
+                <a href="/home" style="color:inherit!important;">
+                    <span class="w3-large">Shopify</span>
+                </a>
+
+            </div>
+        </div>
+        <div class="w3-right">
+            <div class="w3-bar-item" style="margin-top: -3px">
+                <div class="w3-dropdown-hover w3-white">
+                    <button  class="w3-button w3-border-0 w3-hover-white w3-white w3-small">
+                        <i class="fa fa-user w3-text-grey w3-xlarge "></i>
+                        <span class="capitalize w3-hide-small"><%- fullname %></span>
+                    </button>
+                    <br>
+                    <div class="w3-dropdown-content w3-card w3-white w3-bar-block w3-animate-zoom" style="">
+                        <div class="w3-bar-item  w3-border-bottom">
+                            <a href="javascript:void(0)"   class=" w3-small w3-text-gray w3-hover-text-dark-gray">
+                                <i class="fa fa-user w3-text-grey  "></i>
+                                <%- fullname %>
+                            </a>
+                        </div>
+                        <div class="w3-bar-item  w3-border-bottom">
+                            <a href="/user/logout" id="logout"  class=" w3-small w3-hover-text-dark-gray">
+                                <i class="fa fa-sign-out w3-text-grey  "></i>
+                                Logout
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-bar-item">
+
+                <div style="margin-top: -3px;cursor:pointer" id="showCart" class="w3-display-container">
+                    <div class="w3-light-gray" style="padding:8px 10px; border-radius: 50%">
+                        <a  href="javascript:void(0)" class="">
+                            <i class="fa fa-shopping-bag w3-text-grey w3-large "></i>
+                        </a>
+
+                    </div>
+
+                    <div class="w3-display-topright" style="margin-top: -0.5em;">
+                       <span class="w3-badge w3-small w3-cyan w3-text-white cart">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('sidebar')%>

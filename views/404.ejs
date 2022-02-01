@@ -1,0 +1,50 @@
+<%- include('./templates/header') %>
+
+<div class="w3-top header mb-5" style=" padding:10px 20px">
+    <div class="w3-bar">
+        <div class="w3-left">
+            <div class="w3-bar-item">
+                <span class="w3-large">Shopify</span>
+            </div>
+        </div>
+        <div class="w3-right">
+            <div class="w3-bar-item">
+                <a href="<%= void(0) %>">
+                    <i class="fa fa-shopping-cart w3-xlarge"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w3-padding-64" >
+    <br><br>
+    <div class="row w3-padding">
+        <div class="col-12 col-md-4 col-lg-4 col-sm-4">
+            &nbsp;
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-4 col-sm-4 w3-padding">
+            <div class="w3-center">
+                <span style="color: rgb(99, 115, 129);!important;">
+                    Sorry, we couldn’t find the page you’re looking for.
+                    Perhaps you’ve mistyped the URL? Be sure to check your spelling.
+                </span>
+                <br>
+                <div class="" style="padding: 10px 40px">
+                    <img class="w3-image" src="/public/img/404.svg">
+                </div>
+                <br>
+                <a href="/" class="w3-btn w3-text-white w3-round-medium w3-card " style="padding:5px 15px; background-color: rgb(250, 84, 28);">Go To Home</a>
+
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-1 col-lg-1 col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+
+<%- include('./templates/footer') %>

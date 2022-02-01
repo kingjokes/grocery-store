@@ -1,0 +1,72 @@
+<%- include('./templates/header') %>
+
+<div class="w3-top header mb-5" style=" padding:10px 20px">
+    <div class="w3-bar">
+        <div class="w3-left">
+            <div class="w3-bar-item">
+                <span class="w3-large">Shopify</span>
+            </div>
+        </div>
+        <div class="w3-right">
+            <div class="w3-bar-item">
+                <a href="<%= void(0) %>">
+                    <i class="fa fa-shopping-cart w3-xlarge"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w3-padding-64" >
+    <br><br>
+    <div class="row w3-padding">
+        <div class="col-12 col-md-1 col-lg-1 col-sm-1">
+            &nbsp;
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-sm-6 w3-hide-small">
+            <img class="w3-image" src="/public/img/background.svg">
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 col-sm-4 w3-padding">
+            <div id="success" class="alert alert-success alert-dismissible"  style="display: none">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+            </div>
+            <div id="error" class="alert alert-danger alert-dismissible" style="display: none">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+            </div>
+            <div class="form-holder">
+                <p style="margin: 0 0 16px;    font-size: 2rem; font-family: Barlow, sans-serif; font-weight: 700; line-height: 1.5; ">Get Started</p>
+                <p style="line-height: 1.85714; font-size: 0.875rem;">
+                    <span style="color: rgb(99, 115, 129);">Already have an account?  </span>
+                    <a href="/" style="color: rgb(250, 84, 28);!important; font-weight: 600">Login</a>
+                </p>
+                <div>
+                    <form id="register-form" method="post" action="/user/register">
+                        <input name="fullname" type="text" required class="input" placeholder="Full Name">
+                        <br>
+                        <input name="email" type="email" required class="input" placeholder="Email">
+                        <br>
+                        <input name="password" minlength="6" id="pass" type="password" required class="input" placeholder="Password">
+                        <br>
+                        <input name="cpass" id="cpass" type="password" required class="input" placeholder="Confirm Password">
+                        <br>
+                        <button disabled id="reg_button" class="w3-btn login-button w3-block" style="width: 100%!important;">Register</button>
+                        <div class="w3-center">
+                            <span class="w3-tiny" style="color: rgb(99, 115, 129);!important;">I agree to Term of Service and Privacy Policy.</span>
+
+                        </div>
+                    </form>
+                </div>
+                <br>
+                &nbsp;
+            </div>
+
+        </div>
+        <div class="col-12 col-md-1 col-lg-1 col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+
+<%- include('./templates/footer') %>

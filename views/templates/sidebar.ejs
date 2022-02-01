@@ -1,0 +1,115 @@
+<nav class="w3-sidebar sideBar" style="display: none">
+    <div class="sideBarTitleContainer">
+        <div class="d-flex flex-row justify-content-between">
+            <div class="sideBarTitle">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="cart">0</span> Item
+            </div>
+            <div>&nbsp;</div>
+            <div class="sideBarTitle">
+                <a
+                    class="w3-btn closeSideBar w3-tiny w3-round-large w3-text-white"
+                   href="javascript:void(0)"
+                    style="color:inherit; background:rgb(210, 63, 87); padding:5px 7px">
+                    <i class="fa fa-times"></i>
+                    Close
+                </a>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <hr class="sideBarTitleDivider">
+    <div class="w3-display-container noItem"  style="height: 100vh; display: none">
+        <div class="w3-display-middle w3-center justify-content-center" style="width: 100%">
+            <div class="w3-center" style="margin: 0 auto!important;">
+                <img class="w3-image" src="/public/img/shopping-bag.svg">
+                <br>
+                <p class="emptyCartText w3-center"  style="margin: 0 auto!important;">
+                    Your shopping bag is empty. Start shopping
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div style="height:100vh; display: none" class="notEmptyCart" id="create">
+        <div id="cart-list">
+            <div class="cartItemHolder">
+                <div class="d-flex flex-row justify-content-between">
+                    <div style="margin-top: 5px">
+                        <div class="d-flex flex-column w3-center justify-content-center">
+                            <i class="fa fa-plus"></i>
+                            <span>1</span>
+                            <i class="fa fa-minus"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="w3-image" src="/public/img/lime.png" style="width:80px; height: 80px!important; ">
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column">
+                            <div class="cartItemTitle">
+                                Fresh Lime
+                            </div>
+                            <div class="cartItemQuantity">
+                                <span>$1440</span> * <span>1</span>
+                            </div>
+                            <div class="cartItemPrice">
+                                $1440
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-top: 10px">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cartItemHolder">
+                <div class="d-flex flex-row justify-content-between">
+                    <div style="margin-top: 5px">
+                        <div class="d-flex flex-column w3-center justify-content-center">
+                            <i class="fa fa-plus"></i>
+                            <span>1</span>
+                            <i class="fa fa-minus"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="w3-image" src="/public/img/lime.png" style="width:80px; height: 80px!important; ">
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column">
+                            <div class="cartItemTitle">
+                                Fresh Lime
+                            </div>
+                            <div class="cartItemQuantity">
+                                <span>$1440</span> * <span>1</span>
+                            </div>
+                            <div class="cartItemPrice">
+                                $1440
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-top: 10px">
+                            <button class="btn cartItemDelete">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-padding buttonContainer" style="width: 100%!important;">
+            <a href="/checkout" class="w3-btn w3-hover-text-white cartItemCheckoutButton"> Check Out (<span class="totalPrice">$1447</span>)</a>
+        </div>
+    </div>
+
+</nav>

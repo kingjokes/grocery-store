@@ -8,6 +8,7 @@ const verifyToken = require('./middleware/verifyToken')
 const app = express()
 
 
+
 app.set('view engine', 'ejs') //setting view engine as ejs
 
 app.use(express.urlencoded({extended:true}))
@@ -18,7 +19,7 @@ app.use(session({ resave: true ,secret: '123456' , saveUninitialized: true})); /
 
 app.use('/user',router) //handing all user routes
 
-app.listen(8000,'localhost'); //creating server
+app.listen(3000,'localhost'); //creating server
 
 
 //route handling

@@ -5,8 +5,12 @@ const product = require('./controller/productController')
 const user = require('./controller/userController')
 const session = require('express-session')
 const verifyToken = require('./middleware/verifyToken')
+// const helmet = require('helmet');
+const compression = require('compression');
 const app = express()
 
+app.use(compression()); //Compress all routes
+// app.use(helmet());
 
 
 app.set('view engine', 'ejs') //setting view engine as ejs

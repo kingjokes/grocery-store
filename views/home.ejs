@@ -146,8 +146,8 @@
             <h6>Popular Products</h6>
             <span class="w3-small">Best collection in 2021 for you!</span>
             <div class="row">
-                <% if(products.length!== 0){
-                    products.map((item)=>{ %>
+                <% if(productsDisplay.length!== 0){
+                    productsDisplay.map((item)=>{ %>
                         <div class="col-12 col-sm-3 col-md-3 col-lg-3 w3-padding w3-margin-bottom">
                             <a href="/product-details/<%- item.id%>" title="<%- item.name%>">
                                 <div class="productList w3-display-container">
